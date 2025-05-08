@@ -259,16 +259,18 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software developer, geek and enthusiast.
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Me chamo Gibson, um desenvolvedor de software localizado no Rio de Janeiro.
+          <div className='flexs flex-col'>
+            <span className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+            Wellcome 👋🏼
+            </span>
+            <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            Me chamo Gibson, sou desenvolvedor de software localizado no Rio de Janeiro.
             Sou fundador e CEO da CodeLift, onde nas horas vagas, ajudo pessoas e empresas buscarem seu espaço no digital.
-          </p>
+            </p>
+          </div>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://github.com/gibsoncs"
+              href="https://github.com/gibsoncs" target='_blanck'
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
