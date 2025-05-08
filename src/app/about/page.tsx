@@ -4,12 +4,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  XIcon,
-} from '@/components/SocialIcons'
+import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
 
 function SocialLink({
@@ -57,58 +52,54 @@ export default function About() {
   return (
     <Container className="mt-16 sm:mt-32">
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-        <div className="lg:pl-20">
+        <div className="flex justify-center lg:pl-20">
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
               src={portraitImage}
               alt=""
               sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              className="rotate-3 rounded-2xl bg-zinc-100 dark:bg-zinc-800"
             />
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
+          <h1 className="pb-1 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+            Minha Jornada na Tecnologia
           </h1>
-          <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+          <span>By Gibson Cruz</span>
+          <div className="mt-6 space-y-7 text-justify text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              Desde muito cedo, sempre fui movido pela curiosidade. Lembro que,
+              quando criança, eu desmontava brinquedos só para entender como
+              funcionavam por dentro. Essa vontade de descobrir e consertar as
+              coisas me acompanhou durante toda a vida.
             </p>
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              Meu primeiro grande encantamento com a tecnologia aconteceu quando
+              tive contato com jogos online. Aquilo abriu um novo mundo para mim
+              — e, com ele, veio a vontade de entender como tudo funcionava por
+              trás das telas. Foi aí que comecei a explorar meu próprio
+              computador: abria, consertava, trocava peças, tudo por conta
+              própria e com a ajuda da minha curiosidade incansável.
             </p>
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              Na adolescência, busquei cursos técnicos para aprofundar meus
+              conhecimentos e logo ingressei na área de suporte técnico.
+              Trabalhei com infraestrutura, resolvendo problemas, entendendo
+              redes, e ganhando experiência prática.
             </p>
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              Com o tempo, percebi que meu interesse por tecnologia ia além de
+              apenas consertar: eu queria criar. Foi então que mergulhei de vez
+              no desenvolvimento de software. Hoje, estou 100% focado nessa
+              área, codificando com paixão e buscando evoluir a cada novo
+              projeto. Essa é a minha jornada até aqui — e ela está só
+              começando.
             </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={XIcon}>
-              Follow on X
-            </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-              Follow on Instagram
-            </SocialLink>
             <SocialLink href="#" icon={GitHubIcon} className="mt-4">
               Follow on GitHub
             </SocialLink>
@@ -120,7 +111,7 @@ export default function About() {
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              spencer@planetaria.tech
+              gibson.cruzds@gmail.com
             </SocialLink>
           </ul>
         </div>
