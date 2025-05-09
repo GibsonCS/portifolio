@@ -5,7 +5,6 @@ import logoStats from '@/images/logos/trending-up.svg'
 import logoUserLock from '@/images/logos/user-lock.svg'
 import logoMoney from '@/images/logos/dollar-sign.svg'
 
-
 const projects = [
   {
     name: 'FitScore',
@@ -25,9 +24,10 @@ const projects = [
   },
   {
     name: 'User Auth API',
-    description: 'Projeto Inteiramente backend de uma API de autenticação e autorização.',
+    description:
+      'Projeto Inteiramente backend de uma API de autenticação e autorização.',
     link: {
-      href: 'https://github.com/GibsonCS/user-autentication-service',
+      href: 'https://user-autentication-service-1.onrender.com/api/documentation',
       label: 'User Auth API',
     },
     logo: logoUserLock,
