@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoStats from '@/images/logos/trending-up.svg'
+import logoUserLock from '@/images/logos/user-lock.svg'
+import logoMoney from '@/images/logos/dollar-sign.svg'
+
 
 const projects = [
   {
@@ -10,7 +12,7 @@ const projects = [
     description:
       'Projeto Frontend que simula uma avaliação preditiva de candidatos.',
     link: { href: 'https://fitscore-lyart.vercel.app', label: 'Fitscore' },
-    logo: logoPlanetaria,
+    logo: logoStats,
   },
   {
     name: 'Budget Manager',
@@ -19,7 +21,16 @@ const projects = [
       href: 'https://budget-manager-mauve-psi.vercel.app/',
       label: 'Budget Manager',
     },
-    logo: logoAnimaginary,
+    logo: logoMoney,
+  },
+  {
+    name: 'User Auth API',
+    description: 'Projeto Inteiramente backend de uma API de autenticação e autorização.',
+    link: {
+      href: 'https://github.com/GibsonCS/user-autentication-service',
+      label: 'User Auth API',
+    },
+    logo: logoUserLock,
   },
 ]
 
