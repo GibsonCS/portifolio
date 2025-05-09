@@ -5,7 +5,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
 
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoPlanetaria from '@/images/logos/map-pinned.svg'
 import image1 from '@/images/photos/image-1.png'
 import image2 from '@/images/photos/image-2.png'
 import image3 from '@/images/photos/image-3.png'
@@ -104,8 +104,13 @@ function Role({ role }: { role: Role }) {
 
   return (
     <li className="flex gap-4">
-      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full bg-amber-100 shadow-md ring-1 shadow-zinc-800/5 dark:ring-0">
+        <Image
+          src={role.logo}
+          alt=""
+          className="h-7 w-7 rounded-md bg-amber-100"
+          unoptimized
+        />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -136,7 +141,7 @@ function Resume() {
       company: 'Fesudeperj',
       title: 'Full-stack Developer',
       logo: logoPlanetaria,
-      start: '2021',
+      start: '2023',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
@@ -148,7 +153,7 @@ function Resume() {
       logo: logoPlanetaria,
       start: '2021',
       end: {
-        label: '2022',
+        label: '2023',
         dateTime: new Date().getFullYear().toString(),
       },
     },
@@ -180,7 +185,7 @@ function Resume() {
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Tragetória</span>
       </h2>
-      <ol className="mt-6 space-y-4">
+      <ol className="space-y-4s mt-6">
         {resume.map((role, roleIndex) => (
           <Role key={roleIndex} role={role} />
         ))}
