@@ -8,9 +8,8 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: '%s - Gibson Cruz',
-    default:
-      'Gibson Cruz - Software developer, founder, and amateur astronaut',
-  }
+    default: 'Gibson Cruz - Software developer',
+  },
 }
 export default function RootLayout({
   children,
