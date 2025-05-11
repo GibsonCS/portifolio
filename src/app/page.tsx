@@ -1,3 +1,5 @@
+'use client'
+
 import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
 
@@ -12,6 +14,7 @@ import image3 from '@/images/photos/image-3.png'
 import image4 from '@/images/photos/image-4.png'
 import image5 from '@/images/photos/image-5.png'
 import Contact from '@/components/Contact'
+import { useEffect, useState } from 'react'
 
 const images = [
   {
@@ -204,21 +207,44 @@ function Resume() {
 }
 
 function Photos() {
+   
+  const [visible, setVisible] = useState(false)
+  const [animate, setAnimate] = useState(true)
+  
+  useEffect(() => {
+    const timeVisible = setTimeout(() => {
+        setVisible(true)
+  
+    },500)
+    
+   const timeAnimaiton =  setTimeout(() => {
+      setAnimate(false)
+    }, 3000)
+
+    return () => {
+      clearTimeout(timeVisible)
+      clearTimeout(timeAnimaiton)
+    }
+
+  },[]) 
+
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
   return (
-    <div className="mt-16 sm:mt-20">
+    <div  className={` transition-opacity duration-1000 ${
+          visible ? 'opacity-75' : 'opacity-0'} p-8 animate-bounce 
+          ${animate ? 'animate-bounce' : 'animate-none duration-700 transition '}`} >
+
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
         {images.map((image, imageIndex) => (
           <div
             key={imageIndex}
-            className={`relative aspect-9/10 w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 ${rotations[imageIndex % rotations.length]}`}
+            className={`aspect-9/10 w-24 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-42 sm:rounded-2xl dark:bg-zinc-800 ${rotations[imageIndex % rotations.length]}`}
           >
             <Image
               src={image.image}
               alt={image.alt}
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
+              className=" inset-0 h-full w-full object-cover"
             />
           </div>
         ))}
@@ -227,7 +253,15 @@ function Photos() {
   )
 }
 
-export default async function Home() {
+export default function Home() {
+   const [visible, setVisible] = useState(false)
+  useEffect(() => {
+    setTimeout(() => {
+        setVisible(true)
+  
+    },4000)
+
+  },[])
   return (
     <>
       <Container className="mt-9">
