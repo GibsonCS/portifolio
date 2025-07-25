@@ -4,8 +4,28 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import logoStats from '@/images/logos/trending-up.svg'
 import logoUserLock from '@/images/logos/user-lock.svg'
 import logoMoney from '@/images/logos/dollar-sign.svg'
+import mousePointer from '@/images/logos/mouse-pointer.svg'
 
 const projects = [
+  {
+    name: 'CodeLift',
+    description: 'Projeto FullStack do site da CodeLift.',
+    link: {
+      href: 'https://www.codelift.com.br/',
+      label: 'CodeLift',
+    },
+    logo: mousePointer,
+  },
+  {
+    name: 'User Auth API',
+    description:
+      'Projeto Inteiramente backend de uma API de autenticação e autorização.',
+    link: {
+      href: 'https://user-autentication-service-1.onrender.com/api/documentation',
+      label: 'User Auth API',
+    },
+    logo: logoUserLock,
+  },
   {
     name: 'FitScore',
     description:
@@ -21,16 +41,6 @@ const projects = [
       label: 'Budget Manager',
     },
     logo: logoMoney,
-  },
-  {
-    name: 'User Auth API',
-    description:
-      'Projeto Inteiramente backend de uma API de autenticação e autorização.',
-    link: {
-      href: 'https://user-autentication-service-1.onrender.com/api/documentation',
-      label: 'User Auth API',
-    },
-    logo: logoUserLock,
   },
 ]
 
