@@ -8,30 +8,24 @@ import mousePointer from '@/images/logos/mouse-pointer.svg'
 
 const projects = [
   {
-    name: 'CodeLift',
-    description: 'Projeto FullStack do site da CodeLift.',
+    name: 'Sistema Administrativo',
+    description:
+    'Projeto fullstack usando Java com Spring no Backend e Thymeleaf no Frontend.(Login: user | Senha: master123)',
     link: {
-      href: 'https://www.codelift.com.br/',
-      label: 'CodeLift',
+      href: 'https://administrate-system-c502ed86eb0c.herokuapp.com/login',
+      label: 'Sistema Administrativo',
     },
-    logo: mousePointer,
+    logo: logoUserLock,
   },
   {
     name: 'User Auth API',
     description:
-      'Projeto Inteiramente backend de uma API de autenticação e autorização.',
+    'Projeto Inteiramente backend de uma API de autenticação e autorização.',
     link: {
       href: 'https://user-autentication-service-1.onrender.com/api/documentation',
       label: 'User Auth API',
     },
     logo: logoUserLock,
-  },
-  {
-    name: 'FitScore',
-    description:
-      'Projeto Frontend que simula uma avaliação preditiva de candidatos.',
-    link: { href: 'https://fitscore-lyart.vercel.app', label: 'Fitscore' },
-    logo: logoStats,
   },
   {
     name: 'Budget Manager',
@@ -41,6 +35,22 @@ const projects = [
       label: 'Budget Manager',
     },
     logo: logoMoney,
+  },
+  {
+    name: 'CodeLift',
+    description: 'Projeto FullStack do site da CodeLift.',
+    link: {
+      href: 'https://www.codelift.com.br/',
+      label: 'CodeLift',
+    },
+    logo: mousePointer,
+  },
+  {
+    name: 'FitScore',
+    description:
+      'Projeto Frontend que simula uma avaliação preditiva de candidatos.',
+    link: { href: 'https://fitscore-lyart.vercel.app', label: 'Fitscore' },
+    logo: logoStats,
   },
 ]
 
