@@ -10,7 +10,7 @@ const projects = [
   {
     name: 'Sistema Administrativo',
     description:
-    'Projeto fullstack usando Java com Spring no Backend e Thymeleaf no Frontend.(Login: user | Senha: master123)',
+    'Projeto fullstack usando Java com Spring no Backend e Thymeleaf no Frontend. (Login: admin | Senha: master123)',
     link: {
       href: 'https://administrate-system-c502ed86eb0c.herokuapp.com/login',
       label: 'Sistema Administrativo',
