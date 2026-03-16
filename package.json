@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-plus-template",
+  "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {"node": "22"},
+  "author": {"name": "Gibson"},
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
     "@headlessui/react": "^2.1.0",

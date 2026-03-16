@@ -189,12 +189,12 @@ function Resume() {
         <span className="ml-3">Tragetória</span>
       </h2>
       <ol className="space-y-4s mt-6">
-        {resume.map((role, roleIndex) => (
+        {resume.map((role: any, roleIndex: any) => (
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
       <Button
-        href="./docs/Gibson_Cruz_Desenvolvedor_Fullstack.pdf"
+        href="./docs/Gibson-Cruz-Curriculo.pdf"
         target="_blank"
         variant="secondary"
         className="group mt-6 w-full animate-bounce"
@@ -272,8 +272,7 @@ export default function Home() {
             </span>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
               Me chamo Gibson, sou desenvolvedor de software localizado no Rio
-              de Janeiro. Sou fundador e CEO da CodeLift, onde nas horas vagas,
-              ajudo pessoas e empresas buscarem seu espaço no digital.
+              de Janeiro.
             </p>
           </div>
           <div className="mt-6 flex gap-6">
