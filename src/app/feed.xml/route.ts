@@ -9,7 +9,7 @@ export async function GET(req: Request) {
 
   let author = {
     name: 'Gibson Cruz',
-    email: 'gibson.cruzds@planetaria.tech',
+    email: 'gibson.cruzds@gmail.com',
   }
 
   let feed = new Feed({
