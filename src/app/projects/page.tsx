@@ -1,22 +1,11 @@
 import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoStats from '@/images/logos/trending-up.svg'
 import logoUserLock from '@/images/logos/user-lock.svg'
-import logoMoney from '@/images/logos/dollar-sign.svg'
-import mousePointer from '@/images/logos/mouse-pointer.svg'
+import Link from 'next/link'
 
 const projects = [
-  {
-    name: 'Sistema Administrativo',
-    description:
-    'Projeto fullstack usando Java com Spring no Backend e Thymeleaf no Frontend.(Login: user | Senha: master123)',
-    link: {
-      href: 'https://administrate-system-c502ed86eb0c.herokuapp.com/login',
-      label: 'Sistema Administrativo',
-    },
-    logo: logoUserLock,
-  },
+  
   {
     name: 'User Auth API',
     description:
@@ -26,32 +15,9 @@ const projects = [
       label: 'User Auth API',
     },
     logo: logoUserLock,
+    sourceCode: "https://github.com/GibsonCS/user-autentication-service"
   },
-  {
-    name: 'Budget Manager',
-    description: 'Projeto Frontend de um gerenciador de orçamento.',
-    link: {
-      href: 'https://budget-manager-mauve-psi.vercel.app/',
-      label: 'Budget Manager',
-    },
-    logo: logoMoney,
-  },
-  {
-    name: 'CodeLift',
-    description: 'Projeto FullStack do site da CodeLift.',
-    link: {
-      href: 'https://www.codelift.com.br/',
-      label: 'CodeLift',
-    },
-    logo: mousePointer,
-  },
-  {
-    name: 'FitScore',
-    description:
-      'Projeto Frontend que simula uma avaliação preditiva de candidatos.',
-    link: { href: 'https://fitscore-lyart.vercel.app', label: 'Fitscore' },
-    logo: logoStats,
-  },
+ 
 ]
 
 function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -69,21 +35,22 @@ export default function Projects() {
   return (
     <SimpleLayout
       title="Coisas que fiz tentanto colocar minha marca no mundo."
-      intro="Trabalhei em vários pequenos projetos ao longo dos anos. Muitos deles são de código aberto, então, se você vir algo que desperte seu interesse, confira o código e contribua se tiver ideias de como ele pode ser melhorado."
+      intro="Trabalhei em projetos ao longo dos anos. Muitos deles são de código aberto, então, se você vir algo que desperte seu interesse, confira o código e contribua se tiver ideias de como ele pode ser melhorado."
     >
       <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
       >
         {projects.map((project) => (
-          <Card as="li" key={project.name}>
+            <div className='flex flex-col'>
+            <Card as="li" key={project.name}>
             <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
                 src={project.logo}
                 alt=""
                 className="h-8 w-8"
                 unoptimized
-              />
+                />
             </div>
             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
               <Card.Link href={project.link.href} target="_blank">
@@ -91,11 +58,13 @@ export default function Projects() {
               </Card.Link>
             </h2>
             <Card.Description>{project.description}</Card.Description>
-            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+            <p className="relative z-10 mt-2 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
               <LinkIcon className="h-6 w-6 flex-none" />
               <span className="ml-2">{project.link.label}</span>
             </p>
           </Card>
+          <Link className='p-2 mt-2' href={project.sourceCode} target='_blank' >Source code</Link>
+          </div>        
         ))}
       </ul>
     </SimpleLayout>
