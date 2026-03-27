@@ -141,18 +141,28 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'Fesudeperj',
-      title: 'Full-stack Developer',
+      company: 'Full-stack Developer',
+      title: 'Legal',
       logo: logoPlanetaria,
-      start: '2023',
+      start: '2025',
       end: {
-        label: 'Present',
+        label: '2025',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Fesudeperj',
-      title: 'Tecnólogo em Gestão da TI',
+      company: 'Full-stack Developer',
+      title: 'Fesudeperj',
+      logo: logoPlanetaria,
+      start: '2023',
+      end: {
+        label: '2025',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
+      company: 'IT Management Technologist',
+      title: 'Fsudeperj',
       logo: logoPlanetaria,
       start: '2021',
       end: {
@@ -161,8 +171,8 @@ function Resume() {
       },
     },
     {
-      company: 'Triunfo',
-      title: 'IT Assist',
+      company: 'IT Assist',
+      title: 'Triunfo',
       logo: logoPlanetaria,
       start: '2018',
       end: {
@@ -171,8 +181,8 @@ function Resume() {
       },
     },
     {
-      company: 'Nova Era',
-      title: 'IT Aux',
+      company: 'IT Aux',
+      title: 'Nova Era',
       logo: logoPlanetaria,
       start: '2015',
       end: {
@@ -278,7 +288,7 @@ export default function Home() {
           <div className="mt-6 flex gap-6">
             <SocialLink
               href="https://github.com/gibsoncs"
-              target="_blanck"
+              target="_blank"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
@@ -294,11 +304,13 @@ export default function Home() {
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
-            earum quidem quos, iusto reprehenderit repellat, ipsa explicabo,
-            cumque corrupti maiores quaerat nobis fugit voluptates! Ratione
-            deserunt tempora consequatur iure doloribus!
+          <div className="flex flex-col gap-16 text-justify indent-4 text-xl/10 font-light">
+            Sou desenvolvedor backend com foco em Java e Spring, com experiência na construção de APIs REST e sistemas escaláveis, 
+            priorizando qualidade de código, organização e boas práticas de desenvolvimento.
+            Tenho familiaridade com conceitos de arquitetura como Clean Architecture e DDD, aplicando esses princípios na modelagem de domínio e na estruturação de 
+            aplicações de fácil manutenção e evolução. Busco sempre escrever código limpo, testável e alinhado às necessidades do negócio.
+            Também possuo experiência com Node.js e atuo no frontend quando necessário, o que me permite ter uma visão mais completa das aplicações.
+             Estou constantemente estudando e evoluindo como desenvolvedor, com foco em me tornar cada vez mais sólido em backend com Java.
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Resume />
