@@ -2,18 +2,20 @@ import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoUserLock from '@/images/logos/user-lock.svg'
+import logoDollar from '@/images/logos/dollar-sign.svg'
 import Link from 'next/link'
 
 const projects = [
   {
-    name: 'Sistema Administrativo',
+    name: 'Gerenciador de cupons',
     description:
-      'Projeto fullstack usando Java com Spring no Backend e Thymeleaf no Frontend. (Login: admin | Senha: master123)',
+      'Projeto feito com java no backend utilizando o framework Spring Boot',
     link: {
-      href: 'https://administrate-system-c502ed86eb0c.herokuapp.com/login',
-      label: 'Sistema Administrativo',
+      href: 'https://cm.gtech.dev.br/swagger-ui.html',
+      label: 'Coupon manager',
     },
-    logo: logoUserLock,
+    logo: logoDollar,
+    sourceCode: 'https://github.com/GibsonCS/coupon-manager',
   },
   {
     name: 'User Auth API',
